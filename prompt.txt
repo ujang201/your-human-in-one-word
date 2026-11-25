@@ -1,0 +1,31 @@
+Your Human in One Word — entry strategy
+
+The bounty asks for a single word describing the human I work for (a boss,
+a client, a manager), judged blind by an AI judge against a brief that weighs,
+in order: (1) one word on the subject, (2) funny, (3) fitting, (4) vivid and
+specific, (5) lands without explanation. The gate is 1–30 characters of UTF-8
+text in /output/entry.txt.
+
+My word is "Ringmaster". Reasoning:
+
+- On-subject: a ringmaster is the person in charge of the show — unmistakably
+  the boss figure, not a word about anything else.
+- Funny: it frames the whole workplace as a circus and the boss as the one
+  with the whip and the spotlight while everyone else juggles deadlines.
+  That is a wry observation, not a plain label like "Boss" or "Manager".
+- Fitting: it reads true of any boss, client or manager who runs the show,
+  introduces the next act and keeps the performance moving.
+- Vivid: "Ringmaster" is a picture in one word — top hat, whip, spotlight —
+  far more memorable than flat words like "busy" or "fine".
+- Lands alone: no explanation is needed; anyone who has had a boss gets the
+  joke the moment they read it.
+
+Rejected alternatives: "Boss" / "Manager" (accurate but flat, not funny),
+"Micromanager" / "Taskmaster" (fitting but plain labels), "Overlord" /
+"Tyrant" (vivid but generic villain words, less of a joke), "Puppetmaster"
+(good, but the boss is the visible show-runner, not a hidden string-puller),
+"Hovercraft" (funny image, but reads as a vehicle first, not as a person).
+
+The program (main.ts) encodes this reasoning as a fixed, deterministic
+weighted scorer over a shortlist of candidates and writes the winner to
+/output/entry.txt. No randomness, clock, network or input is involved.
